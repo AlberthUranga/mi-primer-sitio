@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Info Hub | El Universo del Baloncesto</title>
+    <style>
+        /* Estilos Globales */
+        :root {
+            --nba-blue: #17408B;
+            --nba-red: #C9082A;
+            --dark-gray: #111;
+            --light-bg: #f4f4f9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--nba-blue) 60%, var(--nba-red) 100%);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: var(--dark-gray);
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* Secciones */
+        section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--nba-blue);
+            border-bottom: 3px solid var(--nba-red);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        /* Formato de Conferencias (Grid) */
+        .conferencias {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .conferencia-card {
+            padding: 1.5rem;
+            border-radius: 6px;
+            color: white;
+        }
+
+        .este {
+            background: linear-gradient(135deg, #0d2c66, var(--nba-blue));
+        }
+
+        .oeste {
+            background: linear-gradient(135deg, #8a061c, var(--nba-red));
+        }
+
+        .conferencia-card h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            padding-bottom: 0.5rem;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        /* Tabla de Campeones */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: var(--nba-blue);
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: var(--dark-gray);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            nav { flex-direction: column; align-items: center; }
+            nav a { padding: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>NBA INFORMATIVO</h1>
+        <p>Tu portal de datos, historia y estructura de la mejor liga de baloncesto del mundo</p>
+    </header>
+
+    <nav>
+        <a href="#historia">Historia</a>
+        <a href="#estructura">Estructura</a>
+        <a href="#campeones">Palmarés</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- Sección: Historia -->
+        <section id="historia">
+            <h2>¿Qué es la NBA?</h2>
+            <p>La <strong>National Basketball Association (NBA)</strong> es la liga de baloncesto profesional más importante del mundo. Fundada en Nueva York el 6 de junio de 1946 como la BAA (Basketball Association of America), adoptó el nombre actual en 1949 tras fusionarse con la liga rival NBL (National Basketball League).</p>
+            <p>A lo largo de las décadas, la liga ha visto pasar a leyendas que transformaron el deporte globalmente, tales como Bill Russell, Michael Jordan, Kobe Bryant y LeBron James.</p>
+        </section>
+
+        <!-- Sección: Estructura -->
+        <section id="estructura">
+            <h2>Estructura de la Liga</h2>
+            <p>La NBA está compuesta por <strong>30 equipos</strong>, divididos equitativamente en dos conferencias de 15 franquicias cada una. Cada conferencia se subdivide a su vez en tres divisiones de cinco equipos.</p>
+            
+            <div class="conferencias">
+                <div class="conferencia-card este">
+                    <h3>Conferencia Este</h3>
+                    <p>Compuesta por franquicias históricas de la costa atlántica y la zona central.</p>
+                    <ul>
+                        <li>División Atlántico (ej. Boston Celtics, NY Knicks)</li>
+                        <li>División Central (ej. Chicago Bulls, Milwaukee Bucks)</li>
+                        <li>División Sureste (ej. Miami Heat, Atlanta Hawks)</li>
+                    </ul>
+                </div>
+                <div class="conferencia-card oeste">
+                    <h3>Conferencia Oeste</h3>
+                    <p>Caracterizada por su alta competitividad y franquicias del pacífico y Texas.</p>
+                    <ul>
+                        <li>División Noroeste (ej. Denver Nuggets, OKC Thunder)</li>
+                        <li>División Pacífico (ej. LA Lakers, Golden State Warriors)</li>
+                        <li>División Suroeste (ej. Dallas Mavericks, San Antonio Spurs)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Campeones -->
+        <section id="campeones">
+            <h2>Franquicias Más Ganadoras</h2>
+            <p>La gloria máxima en la NBA se mide en campeonatos obtenidos al ganar las Finales de la NBA y levantar el trofeo Larry O'Brien. Históricamente, dos franquicias han dominado el palmarés:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Equipo</th>
+                        <th>Títulos Totales</th>
+                        <th>Años Destacados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <strong><td>Boston Celtics</td></strong>
+                        <strong><td>18</td></strong>
+                        <td>Era Bill Russell (50s-60s), Era Larry Bird (80s), 2008, 2024</td>
+                    </tr>
+                    <tr>
+                        <strong><td>Los Angeles Lakers</td></strong>
+                        <strong><td>17</td></strong>
+                        <td>Era Showtime (80s), Dupla Shaq-Kobe (00s), Kobe (2009-2010), LeBron (2020)</td>
+                    </tr>
+                    <tr>
+                        <td>Golden State Warriors</td>
+                        <td>7</td>
+                        <td>Era Stephen Curry (2015, 2017, 2018, 2022)</td>
+                    </tr>
+                    <tr>
+                        <td>Chicago Bulls</td>
+                        <td>6</td>
+                        <td>Era Michael Jordan (Dos "Three-Peats" en los 90s)</td>
+                    </tr>
+                    <tr>
+                        <td>San Antonio Spurs</td>
+                        <td>5</td>
+                        <td>Era Tim Duncan y Gregg Popovich (1999-2014)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2026 NBA Info Hub. Diseñado para entusiastas del baloncesto. Todos los datos son de carácter informativo.</p>
+    </footer>
+
+</body>
+</html>
